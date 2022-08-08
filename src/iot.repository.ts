@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { types } from 'cassandra-driver';
-import { CassandraConnectorAdapter } from './cassandra.connector.adapter';
+import {  CassandraConnector } from './cassandra.connector';
 
 @Injectable()
 export class IotRepository {
     
-    constructor(private connector: CassandraConnectorAdapter) { }
+    constructor(private connector: CassandraConnector) { }
 
     async getSensorsData(): Promise<types.Row[]> {
         try {

@@ -6,7 +6,7 @@ import { SigV4AuthProvider } from 'aws-sigv4-auth-cassandra-plugin';
 
 
 @Injectable()
-export class CassandraConnectorAdapter {
+export class CassandraConnector {
 
     async connectCassandra(): Promise<Client> {
 
